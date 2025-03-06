@@ -10,6 +10,7 @@ function NavBar() {
             <NavLink to="/" className={customClassName}>Home</NavLink>
             <NavLink to="/reviews" className={customClassName}>Emoji Reviews</NavLink>
             <NavLink to="/about-me" className={customClassName}>About Me</NavLink>
+            <NavLink to="/about-us" className={customClassName}>About Us</NavLink>
         </nav>
     )
 }
