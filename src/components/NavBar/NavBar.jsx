@@ -2,11 +2,14 @@ import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 function NavBar() {
+    const customClassName = ({ isActive }) => {
+        return "menu__link" + (isActive ? " menu__link_active" : "");
+    };
     return (
         <nav className="menu">
-            <NavLink to="/" className="menu__link">Home</NavLink>
-            <NavLink to="/reviews" className="menu__link">Emoji Reviews</NavLink>
-            <NavLink to="/about-me" className="menu__link">About Me</NavLink>
+            <NavLink to="/" className={customClassName}>Home</NavLink>
+            <NavLink to="/reviews" className={customClassName}>Emoji Reviews</NavLink>
+            <NavLink to="/about-me" className={customClassName}>About Me</NavLink>
         </nav>
     )
 }
